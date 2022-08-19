@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 100vh;
+  background-color: #192a32;
+}
+
+#nav {
+  border-bottom: 2px solid rgb(31, 55, 65);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(24, 42, 50);
+}
+
+#nav h1 {
+  font-size: 2rem;
+  color: rgb(169, 191, 200);
+  color: #f1b137;
+  font-family: 'Silkscreen', cursive;
+}
+
+#nav_btn_div {
+  width: 400px;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#nav_btn_div button {
+  width: 35%;
+  height: 80%;
+  font-size: 0.95rem;
+  background-color: rgb(31, 55, 65);
+  color: #f1b137;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  font-family: 'DynaPuff', cursive;
+}
+
+#nav_btn_div button:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#nav_btn_div button:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#main {
+  height: 65vh;
+  border-bottom: 2px solid rgb(31, 55, 65);
+}
+
+#welcome_div {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#welcome_div h1 {
+  font-size: 2rem;
+  color: rgb(169, 191, 200);
+  font-family: 'Aboreto', cursive;
+}
+
+#start_game_btn {
+  background-color: rgb(31, 55, 65);
+  color: #f1b137;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  border: none;
+  height: 40px;
+  width: 200px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'DynaPuff', cursive;
+}
+
+#start_game_btn:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#start_game_btn:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#highest_score_btn {
+  background-color: rgb(31, 55, 65);
+  color: #f1b137;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  border: none;
+  height: 40px;
+  width: 200px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'DynaPuff', cursive;
+}
+
+#highest_score_btn:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#highest_score_btn:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#welcome_div p {
+  font-size: 1.5rem;
+  color: rgb(169, 191, 200);
+  text-transform: capitalize;
+  font-family: 'Rubik Maze', cursive;
+}
+
+#welcome_div p span {
+  color: #31c4c0;
+}
+
+#player_name_div {
+  height: 60vh;
+  display: none;
+  text-align: center;
+  padding: 5vh;
+}
+
+#player_name_div h1 {
+  font-size: 2rem;
+  color: #31c4c0;
+  margin-bottom: 5px;
+  font-family: 'Aboreto', cursive;
+}
+
+#player_form {
+  border: 2px solid rgb(31, 55, 65);
+  border-radius: 10px;
+  height: 40vh;
+  width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#player_form input {
+  width: 90%;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(31, 55, 65);
+  background-color: rgb(31, 55, 65);
+  color: #31c4c0;
+  padding-left: 10px;
+  font-family: 'Aboreto', cursive;
+}
+
+#player_form input:focus {
+  outline: none;
+  border: 1px solid #31c4c0;
+}
+
+#player_form #play {
+  width: 35%;
+  height: 40px;
+  font-size: 1.1rem;
+  background-color: rgb(31, 55, 65);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  color: #31c4c0;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'DynaPuff', cursive;
+}
+
+#player_form #play:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#player_form #play:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#gameboard {
+  display: none;
+  height: 65vh;
+  border: 2px solid rgb(31, 55, 65);
+  text-align: center;
+  padding: 20px;
+}
+
+#x_p,
+#o_p {
+  color: #f1b137;
+  font-size: 1.2rem;
+  font-family: 'Aboreto', cursive;
+}
+
+#x_p {
+  color: #31c4c0;
+}
+
+#turn {
+  font-size: 1.6rem;
+  color: rgb(169, 191, 200);
+  margin: 20px;
+  font-family: 'Aboreto', cursive;
+}
+
+#board {
+  height: 45vh;
+  width: 45vh;
+  margin: auto;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.scope_div {
+  border-radius: 5px;
+  background-color: #1f3540;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scope_div:hover {
+  background-color: #253b46;
+  cursor: pointer;
+}
+
+#cross1,
+#cross2,
+#cross3,
+#cross4,
+#cross5,
+#cross6,
+#cross7,
+#cross8,
+#cross9,
+#circle1,
+#circle2,
+#circle3,
+#circle4,
+#circle5,
+#circle6,
+#circle7,
+#circle8,
+#circle9 {
+  display: none;
+  font-size: 3rem;
+}
+
+#cross1,
+#cross2,
+#cross3,
+#cross4,
+#cross5,
+#cross6,
+#cross7,
+#cross8,
+#cross9 {
+  color: #31c4c0;
+}
+
+#circle1,
+#circle2,
+#circle3,
+#circle4,
+#circle5,
+#circle6,
+#circle7,
+#circle8,
+#circle9 {
+  color: #f1b137;
+}
+
+#result_div {
+  height: 60vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#match_result {
+  font-size: 1.5rem;
+  color: #31c4c0;
+  color: red;
+  font-family: 'Silkscreen', cursive;
+}
+
+#result_div button {
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  background-color: #253b46;
+  color: #f1b137;
+  color: #31c4c0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  display: block;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#result_div button:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#result_div button:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#result_div button span {
+  font-weight: bolder;
+  color: red;
+}
+
+#p1_win,
+#p2_win {
+  font-size: 1.5rem;
+  color: red;
+  color: #31c4c0;
+  color: #f1b137;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#footer {
+  height: 30vh;
+  border-bottom: 2px solid rgb(31, 55, 65);
+}
+
+#social {
+  height: 15vh;
+  border-bottom: 2px solid rgb(31, 55, 65);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}
+
+#fb {
+  color: #4267B2;
+  cursor: pointer;
+}
+
+#twitter {
+  color: #1DA1F2;
+  cursor: pointer;
+}
+
+#insta {
+  color: #FD1D1D;
+  cursor: pointer;
+}
+
+#linkedin {
+  color: #0077b5;
+  cursor: pointer;
+}
+
+#github {
+  color: white;
+  cursor: pointer;
+}
+
+#info {
+  color: #2ecc71;
+  cursor: pointer;
+}
+
+#copyright {
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgb(169, 191, 200);
+  font-family: 'Dancing Script', cursive;
+}
+
+#comp_player_name_div {
+  height: 60vh;
+  display: none;
+  text-align: center;
+  padding: 5vh;
+}
+
+#comp_player_name_div h1 {
+  font-size: 2rem;
+  color: #31c4c0;
+  margin-bottom: 5px;
+  font-family: 'Aboreto', cursive;
+}
+
+#comp_player_form {
+  border: 2px solid rgb(31, 55, 65);
+  border-radius: 10px;
+  height: 40vh;
+  width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#comp_player_form input {
+  width: 90%;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(31, 55, 65);
+  background-color: rgb(31, 55, 65);
+  color: #31c4c0;
+  padding-left: 10px;
+  font-family: 'Aboreto', cursive;
+
+}
+
+#comp_player_form input:focus {
+  outline: none;
+  border: 1px solid #31c4c0;
+}
+
+#comp_player_form #comp_play {
+  width: 35%;
+  height: 40px;
+  font-size: 1.1rem;
+  background-color: rgb(31, 55, 65);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  color: #31c4c0;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'DynaPuff', cursive;
+}
+
+#comp_player_form #comp_play:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#comp_player_form #comp_play:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#comp_gameboard {
+  display: none;
+  height: 65vh;
+  border: 2px solid rgb(31, 55, 65);
+  text-align: center;
+  padding: 20px;
+}
+
+
+#comp_x_p,
+#comp_o_p {
+  color: #f1b137;
+  font-size: 1.2rem;
+  font-family: 'Aboreto', cursive;
+
+}
+
+#comp_x_p {
+  color: #31c4c0;
+}
+
+#comp_turn {
+  font-size: 1.6rem;
+  color: rgb(169, 191, 200);
+  margin: 20px;
+  font-family: 'Aboreto', cursive;
+
+}
+
+#comp_board {
+  height: 45vh;
+  width: 45vh;
+  margin: auto;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#cross1_comp,
+#cross2_comp,
+#cross3_comp,
+#cross4_comp,
+#cross5_comp,
+#cross6_comp,
+#cross7_comp,
+#cross8_comp,
+#cross9_comp,
+#circle1_comp,
+#circle2_comp,
+#circle3_comp,
+#circle4_comp,
+#circle5_comp,
+#circle6_comp,
+#circle7_comp,
+#circle8_comp,
+#circle9_comp {
+  display: none;
+  font-size: 3rem;
+}
+
+#cross1_comp,
+#cross2_comp,
+#cross3_comp,
+#cross4_comp,
+#cross5_comp,
+#cross6_comp,
+#cross7_comp,
+#cross8_comp,
+#cross9_comp {
+  color: #31c4c0;
+}
+
+#circle1_comp,
+#circle2_comp,
+#circle3_comp,
+#circle4_comp,
+#circle5_comp,
+#circle6_comp,
+#circle7_comp,
+#circle8_comp,
+#circle9_comp {
+  color: #f1b137;
+}
+
+
+#comp_result_div {
+  height: 60vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#comp_match_result {
+  font-size: 1.5rem;
+  color: #31c4c0;
+  color: red;
+  font-family: 'Silkscreen', cursive;
+}
+
+#comp_result_div button {
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  background-color: #253b46;
+  color: #f1b137;
+  color: #31c4c0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 2px rgb(16, 26, 31);
+  display: block;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+
+#comp_result_div button:hover {
+  box-shadow: 0px 1px 1px 1px rgb(16, 26, 31);
+}
+
+#comp_result_div button:active {
+  box-shadow: 0px 0px 0px 0px rgb(16, 26, 31);
+}
+
+#comp_result_div button span {
+  font-weight: bolder;
+  color: red;
+}
+
+#comp_p1_win,
+#comp_p2_win {
+  font-size: 1.5rem;
+  color: red;
+  color: #31c4c0;
+  color: #f1b137;
+  font-family: 'Space Grotesk', sans-serif;
+}
