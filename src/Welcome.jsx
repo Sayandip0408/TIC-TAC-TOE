@@ -19,8 +19,8 @@ const Welcome = () => {
             <h1>Hello & Welcome</h1>
             <button id='start_game_btn' onClick={inputPlayerName}>vs Friend</button>
             <button id='highest_score_btn' onClick={inputCompPlayerName}>vs Computer</button>
-            <p>Press the <span>Start</span> button to play game</p>
-            <p>To see the highest score click on the <span>Highest Score</span> button</p>
+            <p>Press the <span>vs Friend</span> button to play with your friend (offline)</p>
+            <p>Press the  <span>vs Computer</span> button to play with the computer</p>
         </div>
     );
 }
